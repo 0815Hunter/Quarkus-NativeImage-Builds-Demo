@@ -1,0 +1,91 @@
+"%prod":
+  quarkus:
+    http:
+      port: 8080
+      host: localhost
+"%dev":
+  quarkus:
+    http:
+      port: 8083
+      host: localhost
+"%native_windows":
+  quarkus:
+    http:
+      port: 8082
+      host: localhost
+"%native_container_build":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-build: true
+"%native_docker_build":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-runtime: docker
+"%native_docker_build_image":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-runtime: docker
+    container-image:
+      build: true
+      push: false
+      registry: 0815hunter
+      group:
+      name: demo
+"%native_docker_build_image_push":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-runtime: docker
+    container-image:
+      build: true
+      push: true
+      registry: 0815hunter
+      group:
+      name: demo
+"%native_docker_build_mandrel":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-runtime: docker
+      builder-image: quay.io/quarkus/ubi-quarkus-mandrel:20.2-java11
+"%native_docker_build_image_mandrel":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-runtime: docker
+      builder-image: quay.io/quarkus/ubi-quarkus-mandrel:20.2-java11
+    container-image:
+      build: true
+      push: false
+      registry: 0815hunter
+      group:
+      name: demo
+"%native_docker_build_image_push_mandrel":
+  quarkus:
+    http:
+      port: 8081
+      host: localhost
+    native:
+      container-runtime: docker
+      builder-image: quay.io/quarkus/ubi-quarkus-mandrel:20.2-java11
+    container-image:
+      build: true
+      push: true
+      registry: 0815hunter
+      group:
+      name: demo
